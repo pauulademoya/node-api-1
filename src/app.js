@@ -1,9 +1,11 @@
-import express from 'express'
-import vatimetroRoutes from './routes/vatimetro.routes.js'
+import express from 'express';
+import vatimetroRoutes from './routes/vatimetro.routes.js';
+import cors from 'cors';
+
+const app = express();
 
 
-const app = express()
-
-app.use('/api',vatimetroRoutes)
+app.use(cors());
+app.use('/api', vatimetroRoutes);
 
 export default app;
